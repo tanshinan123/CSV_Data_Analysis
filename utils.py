@@ -43,8 +43,7 @@ def dataframe_agent(openai_api_key,dataframe,query):
     model = ChatOpenAI(
         model="gpt-4-turbo",
         openai_api_key=openai_api_key,
-        temperature=0,
-        base_url="https://api.aigc369.com/v1")
+        temperature=0)
     agent = create_pandas_dataframe_agent(
         llm=model,
         df=dataframe,
